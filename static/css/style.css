@@ -77,6 +77,25 @@ body{
 .join-btn:hover{
     transform:translateY(-3px);
 }
+.nav-buttons{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.admin-btn{
+    background:#111827;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:40px;
+    font-weight:600;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.admin-btn:hover{
+    background:#1f2937;
+}
 
 /* ================= HERO ================= */
 
