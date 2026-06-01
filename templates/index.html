@@ -62,6 +62,7 @@
                 </a>
 
             </div>
+            
 
             <!-- Stats -->
 
@@ -87,6 +88,43 @@
         </div>
 
     </section>
+    <section class="features">
+
+    <h2>Why Choose NCC?</h2>
+
+    <div class="feature-container">
+
+        <div class="feature-card">
+            <h3>📚 Study Materials</h3>
+            <p>
+                Complete notes, PDFs and practice questions.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📝 Weekly Mock Tests</h3>
+            <p>
+                Regular tests to improve performance.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🎯 Personal Guidance</h3>
+            <p>
+                One-to-one mentoring by Santanu Sir.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🏆 Proven Results</h3>
+            <p>
+                Hundreds of successful JNVST selections.
+            </p>
+        </div>
+
+    </div>
+
+</section>
 
     <!-- Courses -->
 
@@ -123,6 +161,124 @@
         </div>
 
     </section>
+    <section class="results">
+
+    <h2>🏆 Our Successful Students</h2>
+
+    <p class="result-subtitle">
+        Hundreds of students have achieved success through NCC.
+    </p>
+
+    <div class="result-gallery">
+
+        <img src="{{ url_for('static', filename='images/result1.jpg') }}" alt="Result">
+
+        <img src="{{ url_for('static', filename='images/result2.jpg') }}" alt="Result">
+
+        <img src="{{ url_for('static', filename='images/result3.jpg') }}" alt="Result">
+
+        <img src="{{ url_for('static', filename='images/result4.jpg') }}" alt="Result">
+
+    </div>
+
+</section>
+<section class="testimonials">
+
+    <h2>What Parents Say</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+            <p>
+                "Excellent guidance. My son got selected in JNV."
+            </p>
+            <h4>- Parent of Student</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>
+                "Best coaching for JNVST preparation."
+            </p>
+            <h4>- Guardian</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>
+                "Mock tests and study materials helped a lot."
+            </p>
+            <h4>- Successful Student</h4>
+        </div>
+
+    </div>
+
+</section>
+<!-- CTA SECTION -->
+
+<section class="cta">
+
+    <div class="cta-box">
+
+        <h2>
+            Ready To Crack JNVST 2027?
+        </h2>
+
+        <p>
+            Join Navodaya Coaching Center and start your success journey today.
+        </p>
+
+        <a href="#contact" class="cta-btn">
+            Enroll Now
+        </a>
+
+    </div>
+
+</section>
+<!-- ADMISSION FORM -->
+
+<section class="admission" id="admission">
+
+    <h2>Admission Open For JNVST 2027</h2>
+
+    <p>
+        Fill out the form below and our team will contact you.
+    </p>
+
+    <form
+        class="admission-form"
+        action="/admission"
+        method="POST">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Student Name"
+            required>
+
+        <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            required>
+
+        <input
+            type="text"
+            name="student_class"
+            placeholder="Class"
+            required>
+
+        <input
+            type="text"
+            name="district"
+            placeholder="District"
+            required>
+
+        <button type="submit">
+            Enroll Now
+        </button>
+
+    </form>
+
+</section>
 
     <!-- YouTube -->
 
@@ -150,6 +306,60 @@
         <p>✉️ crackjnvst@gmail.com</p>
 
     </section>
+    <!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <h3>Navodaya Coaching Center</h3>
+
+            <p>
+                Expert guidance for JNVST aspirants.
+            </p>
+             <p>
+                Expert guidance from JNV Ex-Student.
+            </p>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#youtube">YouTube</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Contact</h3>
+
+            <p>📞 9126903752</p>
+            <p>📞 9679103103</p>
+
+            <p>📧 crackjnvst@gmail.com</p>
+
+            <p>📍 Paschim Medinipur,West Bengal, India</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Navodaya Coaching Center | All Rights Reserved
+        </p>
+
+    </div>
+
+</footer>
 
 </body>
 

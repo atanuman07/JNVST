@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Poppins, sans-serif;
+        }
+
+        body{
+            background:#0b0f19;
+            color:white;
+            padding:40px;
+        }
+
+        .top-bar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:30px;
+        }
+
+        h1{
+            margin:0;
+        }
+
+        .logout-btn{
+            background:#ef4444;
+            color:white;
+            padding:10px 20px;
+            border-radius:10px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .logout-btn:hover{
+            opacity:0.8;
+        }
+
+        /* Dashboard Cards */
+
+        .dashboard-cards{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            margin-bottom:40px;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            background:#111827;
+            padding:25px;
+            width:250px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 0 20px rgba(74,222,128,.2);
+        }
+
+        .card h2{
+            color:#4ade80;
+            font-size:40px;
+            margin-bottom:10px;
+        }
+
+        .card p{
+            color:white;
+        }
+
+        /* Table */
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+            color:black;
+            border-radius:10px;
+            overflow:hidden;
+        }
+
+        th{
+            background:#4ade80;
+            color:white;
+            padding:15px;
+        }
+
+        td{
+            padding:12px;
+            text-align:center;
+            border-bottom:1px solid #ddd;
+        }
+
+        tr:hover{
+            background:#f5f5f5;
+        }
+
+        /* Delete Button */
+
+        .delete-btn{
+            background:#ef4444;
+            color:white;
+
+            padding:8px 15px;
+
+            border-radius:8px;
+
+            text-decoration:none;
+
+            font-size:14px;
+
+            font-weight:bold;
+        }
+
+        .delete-btn:hover{
+            opacity:0.8;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="top-bar">
+
+        <h1>Admission Applications</h1>
+
+        <a href="/logout" class="logout-btn">
+            Logout
+        </a>
+
+    </div>
+
+    <!-- Dashboard Cards -->
+
+    <div class="dashboard-cards">
+
+        <div class="card">
+            <h2>{{ total_students }}</h2>
+            <p>Total Applications</p>
+        </div>
+
+        <div class="card">
+            <h2>95%</h2>
+            <p>Success Rate</p>
+        </div>
+
+        <div class="card">
+            <h2>5000+</h2>
+            <p>Students Trained</p>
+        </div>
+
+    </div>
+
+    <!-- Student Table -->
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Class</th>
+            <th>District</th>
+            <th>Action</th>
+        </tr>
+
+        {% for student in students %}
+
+        <tr>
+
+            <td>{{ student[0] }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[2] }}</td>
+            <td>{{ student[3] }}</td>
+            <td>{{ student[4] }}</td>
+
+            <td>
+                <a href="/delete/{{ student[0] }}"
+                   class="delete-btn">
+                   Delete
+                </a>
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>

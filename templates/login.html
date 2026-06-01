@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Login</title>
+
+    <style>
+
+        body{
+            background:#0b0f19;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            font-family:Poppins,sans-serif;
+        }
+
+        .login-box{
+            background:#111827;
+            padding:40px;
+            border-radius:20px;
+            width:350px;
+            text-align:center;
+        }
+
+        h2{
+            color:white;
+            margin-bottom:20px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:none;
+            border-radius:10px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#4ade80;
+            border:none;
+            border-radius:10px;
+            color:white;
+            font-weight:bold;
+            cursor:pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <h2>Admin Login</h2>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required>
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
