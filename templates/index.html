@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navodaya Coaching Center</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}"
+                alt="NCC Logo">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#">Results</a></li>
+            <li><a href="#youtube">YouTube</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#" class="join-btn">
+            Enroll Now
+        </a>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Crack JNVST 2027</h1>
+
+            <p>
+                Expert Guidance By Santanu Manna Sir
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#" class="primary-btn">
+                    Enroll Now
+                </a>
+
+                <a href="#" class="secondary-btn">
+                    Watch Classes
+                </a>
+
+            </div>
+
+            <!-- Stats -->
+
+            <div class="stats">
+
+                <div class="stat-box">
+                    <h2>10000+</h2>
+                    <p>Students</p>
+                </div>
+
+                <div class="stat-box">
+                    <h2>95%</h2>
+                    <p>Success Rate</p>
+                </div>
+
+                <div class="stat-box">
+                    <h2>15+</h2>
+                    <p>Years Experience</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Courses -->
+
+    <section class="courses" id="courses">
+
+        <h2>Our Courses</h2>
+
+        <div class="course-container">
+
+            <div class="course-card">
+                <h3>Regular Batch</h3>
+                <p>
+                    Complete preparation for JNVST with notes,
+                    mock tests and proper guidance.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <h3>Weekend Batch</h3>
+                <p>
+                    Perfect for rular students who need
+                    flexible schedules.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <h3>Crash Course</h3>
+                <p>
+                    Intensive revision and competitive type exam-focused
+                    preparation.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- YouTube -->
+
+    <section class="youtube" id="youtube">
+
+        <h2>Watch Jawhar Navodaya Vidyalaya School</h2>
+        <h2>By Yours Beloved Santanu Sir</h2>
+
+        <iframe
+            src="https://www.youtube.com/embed/t6mj8uoDE_g"
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>📞 9126903752(Prity Madam)</p>
+        <p>📞 9679103103(Amartya Sir)</p>
+        <p>✉️ crackjnvst@gmail.com</p>
+
+    </section>
+
+</body>
+
+</html>
