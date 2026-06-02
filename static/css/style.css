@@ -728,6 +728,11 @@ body{
 
     font-size:16px;
 }
+.admission-form input.filled{
+    background:#ffffff !important;
+    color:#000000 !important;
+    font-weight:700 !important;
+}
 
 .admission-form button{
     padding:18px;
@@ -935,15 +940,16 @@ input::placeholder{
 input:focus,
 select:focus{
 
+    background:#ffffff !important;
+    color:#000000 !important;
+    font-weight:700;
+
     outline:none;
 
     border:2px solid #7ee08a;
 
     box-shadow:
-    0 0 15px rgba(126,224,138,.7),
-    0 0 30px rgba(126,224,138,.4);
-
-    transform:translateY(-2px);
+    0 0 8px rgba(126,224,138,.35);
 
     transition:.3s;
 }
@@ -1012,13 +1018,23 @@ select.filled{
 select.filled option{
     color:#000;
 }
-select.filled{
-    background:#ffffff !important;
-    color:#111827 !important;
-    font-weight:600;
-}
+
 
 .admission-form input{
     font-weight:600;
-    color:#111827;
+    color:white;
+}
+.input-filled{
+    background:#ffffff !important;
+    color:#111827 !important;
+}
+.filled{
+    background:#ffffff !important;
+    color:#000000 !important;
+    font-weight:700 !important;
+}
+.admission-form input.filled{
+    background:#ffffff !important;
+    color:#000000 !important;
+    font-weight:700 !important;
 }

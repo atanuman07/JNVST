@@ -261,10 +261,12 @@ target="_blank">
         method="POST">
 
         <input
-            type="text"
-            name="name"
-            placeholder="Student Name"
-            required>
+    type="text"
+    id="name"
+    name="name"
+    class="filled"
+    placeholder="Student Name"
+    required>
     <div class="phone-row">
 
     <input
@@ -515,36 +517,34 @@ function validatePhone(){
 }
 
 </script>
-<script>
+ <script>
 
-document.addEventListener("DOMContentLoaded", function(){
+const district = document.getElementById("district");
 
-    const classSelect = document.getElementById("student_class");
-    const districtSelect = document.getElementById("district");
+district.addEventListener("change", function(){
 
-    classSelect.addEventListener("change", function(){
+    if(this.value !== ""){
 
-        if(this.value){
-            this.classList.add("filled");
-        }else{
-            this.classList.remove("filled");
-        }
+        this.style.background = "#ffffff";
+        this.style.color = "#111827";
 
-    });
-
-    districtSelect.addEventListener("change", function(){
-
-        if(this.value){
-            this.classList.add("filled");
-        }else{
-            this.classList.remove("filled");
-        }
-
-    });
+    }
 
 });
 
 </script>
+
+<script>
+
+function validatePhone(){
+
+    ...
+}
+
+</script>
+
+</body>
+</html>
 </body>
 
 </html>
