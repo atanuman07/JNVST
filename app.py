@@ -1,4 +1,4 @@
-from f  lask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session
 import sqlite3
 
 app = Flask(__name__)
@@ -38,11 +38,7 @@ def admission():
     conn.commit()
     conn.close()
 
-    return """
-    <h1>Application Submitted Successfully!</h1>
-    <br>
-    <a href="/">Go Back To Website</a>
-    """
+    return render_template("success.html")
 
 
 # =========================
