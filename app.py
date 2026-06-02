@@ -23,11 +23,12 @@ def admission():
     name = request.form["name"]
     phone = request.form["phone"]
 
-    if len(phone) != 10 or not phone.isdigit():
-        return """
-        <h1>Invalid Phone Number</h1>
-        <a href="/">Go Back</a>
-        """
+    if (
+    len(phone) != 10
+    or not phone.isdigit()
+    or phone[0] not in ["6", "7", "8", "9"]
+    ):
+        return redirect("/")
 
     student_class = request.form["student_class"]
     district = request.form["district"]

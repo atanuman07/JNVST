@@ -70,7 +70,7 @@ target="_blank">
     Watch Classes
 
 </a>
-    </a>
+    
 
 </div>
             
@@ -255,16 +255,15 @@ target="_blank">
         Fill out the form below and our team will contact you.
     </p>
 
-    <form
-        class="admission-form"
-        action="/admission"
-        method="POST">
+    <form class="admission-form"
+      action="/admission"
+      method="POST"
+      onsubmit="return validateForm()">
 
         <input
     type="text"
     id="name"
     name="name"
-    class="filled"
     placeholder="Student Name"
     required>
     <div class="phone-row">
@@ -338,7 +337,7 @@ target="_blank">
 
     <form
     class="admission-form"
-    action="/admission"
+    action="/check-status"
     method="POST"
     autocomplete="off">
 
@@ -517,34 +516,80 @@ function validatePhone(){
 }
 
 </script>
- <script>
+<script>
 
-const district = document.getElementById("district");
+document.getElementById("name").addEventListener("input", function(){
 
-district.addEventListener("change", function(){
+    if(this.value.trim() !== ""){
+        this.classList.add("filled");
+    }else{
+        this.classList.remove("filled");
+    }
+
+});
+
+document.getElementById("phone").addEventListener("input", function(){
+
+    if(this.value.trim() !== ""){
+        this.classList.add("filled");
+    }else{
+        this.classList.remove("filled");
+    }
+
+});
+
+document.getElementById("student_class").addEventListener("change", function(){
 
     if(this.value !== ""){
+        this.classList.add("filled");
+    }else{
+        this.classList.remove("filled");
+    }
 
-        this.style.background = "#ffffff";
-        this.style.color = "#111827";
+});
 
+document.getElementById("district").addEventListener("change", function(){
+
+    if(this.value !== ""){
+        this.classList.add("filled");
+    }else{
+        this.classList.remove("filled");
     }
 
 });
 
 </script>
-
 <script>
+function validateForm(){
 
-function validatePhone(){
+    const phone = document.getElementById("phone").value;
 
-    ...
+    const invalidNumbers = [
+        "1111111111",
+        "2222222222",
+        "3333333333",
+        "4444444444",
+        "5555555555",
+        "6666666666",
+        "7777777777",
+        "8888888888",
+        "9999999999",
+        "1234567890",
+        "0123456789"
+    ];
+
+    if(invalidNumbers.includes(phone)){
+        alert("Invalid Mobile Number");
+        return false;
+    }
+
+    if(!/^[6-9][0-9]{9}$/.test(phone)){
+        alert("Please enter a valid Indian mobile number");
+        return false;
+    }
+
+    return true;
 }
-
 </script>
-
 </body>
-</html>
-</body>
-
 </html>
