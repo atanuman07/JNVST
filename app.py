@@ -17,12 +17,18 @@ def home():
 # =========================
 # ADMISSION FORM
 # =========================
-
 @app.route("/admission", methods=["POST"])
 def admission():
 
     name = request.form["name"]
     phone = request.form["phone"]
+
+    if len(phone) != 10 or not phone.isdigit():
+        return """
+        <h1>Invalid Phone Number</h1>
+        <a href="/">Go Back</a>
+        """
+
     student_class = request.form["student_class"]
     district = request.form["district"]
 
@@ -39,6 +45,7 @@ def admission():
     conn.close()
 
     return render_template("success.html")
+
 
 
 # =========================
@@ -126,7 +133,94 @@ def logout():
 # =========================
 # RUN FLASK
 # =========================
+@app.route("/approve/<int:id>")
+def approve_student(id):
 
+    conn = sqlite3.connect("admissions.db")
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "UPDATE students SET status='Approved' WHERE id=?",
+        (id,)
+    )
+
+    conn.commit()
+    conn.close()
+
+    return redirect("/admin")
+
+
+@app.route("/reject/<int:id>")
+def reject_student(id):
+
+    conn = sqlite3.connect("admissions.db")
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "UPDATE students SET status='Rejected' WHERE id=?",
+        (id,)
+    )
+
+    conn.commit()
+    conn.close()
+
+    return redirect("/admin")
+
+
+@app.route("/check-status", methods=["POST"])
+def check_status():
+
+    phone = request.form["phone"]
+
+    conn = sqlite3.connect("admissions.db")
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "SELECT status,name FROM students WHERE phone=?",
+        (phone,)
+    )
+
+    student = cursor.fetchone()
+
+    conn.close()
+
+    if student:
+
+        return render_template(
+            "status.html",
+            name=student[1],
+            status=student[0]
+        )
+
+    return """
+    <h1>No Application Found</h1>
+    <a href="/">Go Back</a>
+    """
+
+    conn = sqlite3.connect("admissions.db")
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "SELECT status,name FROM students WHERE phone=?",
+        (phone,)
+    )
+
+    student = cursor.fetchone()
+
+    conn.close()
+
+    if student:
+
+        return render_template(
+            "status.html",
+            name=student[1],
+            status=student[0]
+        )
+
+    return """
+    <h1>No Application Found</h1>
+    <a href='/'>Go Back</a>
+    """
 if __name__ == "__main__":
     app.run(
         host="0.0.0.0",

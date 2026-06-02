@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
 
         *{
             margin:0;
             padding:0;
             box-sizing:border-box;
-            font-family:Poppins, sans-serif;
+            font-family:'Poppins',sans-serif;
         }
 
         body{
@@ -21,132 +23,73 @@
             padding:40px;
         }
 
-        .top-bar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:50px;
-    padding:20px 0;
-}
+        h1{
+            text-align:center;
+            margin-bottom:30px;
+        }
 
-.top-bar h1{
-    font-size:48px;
-    color:white;
-}
+        .dashboard-cards{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            margin-bottom:40px;
+            flex-wrap:wrap;
+        }
 
-.top-actions{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-.subtitle{
-    color:#9ca3af;
-    font-size:16px;
-    margin-top:8px;
-}
-.logout-btn{
-    background:#ef4444;
-    color:white;
-    text-decoration:none;
+        .card{
+            background:#111827;
+            padding:25px;
+            width:250px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 0 25px rgba(74,222,128,.15);
+        }
 
-    padding:14px 25px;
+        .card h2{
+            color:#4ade80;
+            font-size:45px;
+            margin-bottom:10px;
+        }
 
-    border-radius:12px;
+        .card p{
+            color:white;
+            font-size:18px;
+        }
 
-    font-weight:600;
+        .search-box{
 
-    transition:0.3s;
-}
+            width:100%;
+            max-width:500px;
 
-.logout-btn:hover{
-    opacity:0.85;
-}
-.search-box{
-    width:400px;
-    height:50px;
+            padding:15px;
 
-    padding:0 20px;
+            margin-bottom:25px;
 
-    border:none;
-    outline:none;
+            border:none;
 
-    border-radius:12px;
+            border-radius:10px;
 
-    font-size:16px;
-
-    background:#111827;
-    color:white;
-
-    border:1px solid rgba(255,255,255,.1);
-}
-
-.search-box::placeholder{
-    color:#9ca3af;
-}
-
-.logout-btn{
-    background:#ef4444;
-    color:white;
-    text-decoration:none;
-
-    padding:14px 25px;
-
-    border-radius:12px;
-
-    font-weight:600;
-
-    transition:0.3s;
-}
-
-.logout-btn:hover{
-    opacity:0.85;
-}
-
-.dashboard-cards{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    margin-bottom:40px;
-    flex-wrap:wrap;
-}
-
-.card{
-    background:#111827;
-    padding:25px;
-    width:250px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 0 20px rgba(74,222,128,.2);
-}
-
-.card h2{
-    color:#4ade80;
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:white;
-}
-        /* Table */
+            font-size:16px;
+        }
 
         table{
             width:100%;
             border-collapse:collapse;
             background:white;
             color:black;
-            border-radius:10px;
+            border-radius:15px;
             overflow:hidden;
         }
 
         th{
-            background:#4ade80;
+            background:#74d286;
             color:white;
             padding:15px;
+            font-size:18px;
         }
 
         td{
-            padding:12px;
+            padding:14px;
             text-align:center;
             border-bottom:1px solid #ddd;
         }
@@ -155,25 +98,56 @@
             background:#f5f5f5;
         }
 
-        /* Delete Button */
+        .approve-btn{
+            background:#22c55e;
+            color:white;
+            padding:8px 15px;
+            border-radius:8px;
+            text-decoration:none;
+            margin-right:5px;
+            font-weight:600;
+        }
+
+        .reject-btn{
+            background:#f59e0b;
+            color:white;
+            padding:8px 15px;
+            border-radius:8px;
+            text-decoration:none;
+            margin-right:5px;
+            font-weight:600;
+        }
 
         .delete-btn{
             background:#ef4444;
             color:white;
-
             padding:8px 15px;
-
             border-radius:8px;
+            text-decoration:none;
+            font-weight:600;
+        }
+
+        .approve-btn:hover,
+        .reject-btn:hover,
+        .delete-btn:hover{
+            opacity:.85;
+        }
+
+        .logout-btn{
+
+            display:inline-block;
+
+            background:#ef4444;
+
+            color:white;
 
             text-decoration:none;
 
-            font-size:14px;
+            padding:12px 25px;
 
-            font-weight:bold;
-        }
+            border-radius:10px;
 
-        .delete-btn:hover{
-            opacity:0.8;
+            margin-bottom:20px;
         }
 
     </style>
@@ -182,34 +156,9 @@
 
 <body>
 
-    <div class="top-bar">
-
-    <div>
-    <h1>Admission Applications</h1>
-    <p class="subtitle">
-        Manage all student admission forms
-    </p>
-</div>
-
-    <div class="top-actions">
-
-        <input
-        type="text"
-        id="searchInput"
-        placeholder="Search by Name, Phone or District..."
-        class="search-box">
-
-        <a href="/logout" class="logout-btn">
-            Logout
-        </a>
-
-    </div>
-
-</div>
-
-        
-
-    <!-- Dashboard Cards -->
+    <a href="/logout" class="logout-btn">
+        Logout
+    </a>
 
     <div class="dashboard-cards">
 
@@ -230,39 +179,79 @@
 
     </div>
 
-   <!-- Student Table -->
+    <h1>Admission Applications</h1>
 
-<table id="studentTable">
+    <input
+    type="text"
+    id="searchInput"
+    placeholder="Search by Name, Phone or District..."
+    class="search-box">
 
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Phone</th>
-        <th>Class</th>
-        <th>District</th>
-        <th>Action</th>
-    </tr>
+    <table id="studentTable">
 
-    {% for student in students %}
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Class</th>
+            <th>District</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
 
-    <tr>
-        <td>{{ student[0] }}</td>
-        <td>{{ student[1] }}</td>
-        <td>{{ student[2] }}</td>
-        <td>{{ student[3] }}</td>
-        <td>{{ student[4] }}</td>
+        {% for student in students %}
 
-        <td>
-            <a href="/delete/{{ student[0] }}"
-               class="delete-btn">
-               Delete
-            </a>
-        </td>
-    </tr>
+        <tr>
 
-    {% endfor %}
+            <td>{{ student[0] }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[2] }}</td>
+            <td>{{ student[3] }}</td>
+            <td>{{ student[4] }}</td>
 
-</table>
+            <td>
+
+                {% if student[5] == "Approved" %}
+
+                    🟢 Approved
+
+                {% elif student[5] == "Rejected" %}
+
+                    🔴 Rejected
+
+                {% else %}
+
+                    🟡 Pending
+
+                {% endif %}
+
+            </td>
+
+            <td>
+
+                <a href="/approve/{{ student[0] }}"
+                   class="approve-btn">
+                   Approve
+                </a>
+
+                <a href="/reject/{{ student[0] }}"
+                   class="reject-btn">
+                   Reject
+                </a>
+
+                <a href="/delete/{{ student[0] }}"
+                   class="delete-btn">
+                   Delete
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
 <script>
 
 document.getElementById("searchInput")
@@ -291,6 +280,7 @@ document.getElementById("searchInput")
 });
 
 </script>
+
 </body>
 
 </html>

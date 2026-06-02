@@ -265,24 +265,59 @@ target="_blank">
             name="name"
             placeholder="Student Name"
             required>
+    <div class="phone-row">
 
-        <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            required>
+    <input
+    type="text"
+    id="phone"
+    name="phone"
+    placeholder="Enter 10-digit Mobile Number"
+    maxlength="10"
+    inputmode="numeric"
+    required
+    oninput="this.value=this.value.replace(/[^0-9]/g,''); validatePhone();">
+    <span id="phoneMessage"></span>
 
-        <input
-            type="text"
-            name="student_class"
-            placeholder="Class"
-            required>
+</div>
+   
+       
+   <select id="student_class" name="student_class" required>
+    <option value="">Select Class</option>
+    <option value="2">Class 2</option>
+    <option value="3">Class 3</option>
+    <option value="4">Class 4</option>
+    <option value="5">Class 5</option>
+    <option value="6">Class 6</option>
+</select>
 
-        <input
-            type="text"
-            name="district"
-            placeholder="District"
-            required>
+        <select name="district" id="district" required>
+
+        <option value="">Select District</option>
+        <option>Alipurduar</option>
+        <option>Bankura</option>
+        <option>Birbhum</option>
+        <option>Cooch Behar</option>
+        <option>Dakshin Dinajpur</option>
+        <option>Darjeeling</option>
+        <option>Hooghly</option>
+        <option>Howrah</option>
+        <option>Jalpaiguri</option>
+        <option>Jhargram</option>
+        <option>Kalimpong</option>
+        <option>Kolkata</option>
+        <option>Malda</option>
+        <option>Murshidabad</option>
+        <option>Nadia</option>
+        <option>North 24 Parganas</option>
+        <option>Paschim Bardhaman</option>
+        <option>Paschim Medinipur</option>
+        <option>Purba Bardhaman</option>
+        <option>Purba Medinipur</option>
+        <option>Purulia</option>
+        <option>South 24 Parganas</option>
+        <option>Uttar Dinajpur</option>
+
+        </select>
 
         <button type="submit">
             Enroll Now
@@ -291,6 +326,34 @@ target="_blank">
     </form>
 
 </section>
+<section class="status-check">
+
+    <h2>Check Admission Status</h2>
+
+    <p class="status-subtitle">
+        Enter your registered phone number
+    </p>
+
+    <form
+    class="admission-form"
+    action="/admission"
+    method="POST"
+    autocomplete="off">
+
+        <input
+        type="text"
+        name="phone"
+        placeholder="Enter Registered Phone Number"
+        required>
+
+        <button type="submit">
+            Check Status
+        </button>
+
+    </form>
+
+</section>
+ 
 
     <!-- YouTube -->
 
@@ -306,7 +369,6 @@ target="_blank">
         </iframe>
 
     </section>
-
     <!-- Contact -->
 
     <section class="contact" id="contact">
@@ -384,6 +446,105 @@ target="_blank">
     alt="WhatsApp">
 
 </a>
+<script>
+
+const district = document.getElementById("district");
+
+district.addEventListener("change", function(){
+
+    if(this.value !== ""){
+
+        this.style.background = "#ffffff";
+        this.style.color = "#111827";
+
+    }
+
+});
+
+</script>
+<script>
+
+function validatePhone(){
+
+    const phone = document.getElementById("phone").value;
+    const msg = document.getElementById("phoneMessage");
+
+    const invalidNumbers = [
+        "1111111111",
+        "2222222222",
+        "3333333333",
+        "4444444444",
+        "5555555555",
+        "6666666666",
+        "7777777777",
+        "8888888888",
+        "9999999999",
+        "1234567890",
+        "0123456789"
+    ];
+
+    if(phone.length === 0){
+
+        msg.innerHTML = "";
+        return;
+    }
+
+    if(phone.length < 10){
+
+        msg.innerHTML = "⚠ Enter 10 digits";
+        msg.className = "invalid";
+        return;
+    }
+
+    if(invalidNumbers.includes(phone)){
+
+        msg.innerHTML = "❌ Invalid Mobile Number";
+        msg.className = "invalid";
+        return;
+    }
+
+    if(!/^[6-9][0-9]{9}$/.test(phone)){
+
+        msg.innerHTML = "❌ Invalid Indian Mobile Number";
+        msg.className = "invalid";
+        return;
+    }
+
+    msg.innerHTML = "✅ Valid Mobile Number";
+    msg.className = "valid";
+}
+
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const classSelect = document.getElementById("student_class");
+    const districtSelect = document.getElementById("district");
+
+    classSelect.addEventListener("change", function(){
+
+        if(this.value){
+            this.classList.add("filled");
+        }else{
+            this.classList.remove("filled");
+        }
+
+    });
+
+    districtSelect.addEventListener("change", function(){
+
+        if(this.value){
+            this.classList.add("filled");
+        }else{
+            this.classList.remove("filled");
+        }
+
+    });
+
+});
+
+</script>
 </body>
 
 </html>

@@ -804,3 +804,221 @@ body{
 .search-box::placeholder{
     color:#9ca3af;
 }
+/* ================= STUDENT STATUS CHECK ================= */
+
+.status-check{
+
+    width:90%;
+    max-width:900px;
+
+    margin:60px auto 80px;
+
+    padding:50px;
+
+    text-align:center;
+
+    background:#111827;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.3);
+}
+
+.status-check h2{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+    color:white;
+}
+
+.status-subtitle{
+
+    color:#9ca3af;
+
+    margin-bottom:30px;
+
+    font-size:16px;
+}
+
+.status-check form{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.status-check input{
+
+    width:420px;
+
+    padding:16px 20px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:#08111f;
+
+    color:white;
+
+    font-size:16px;
+}
+
+input::placeholder{
+    color:rgba(255,255,255,0.95);
+    opacity:1;
+    font-weight:500;
+}
+.status-check button{
+
+    background:#5ee98c;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 28px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.status-check button:hover{
+
+    transform:translateY(-3px);
+}
+.admission-form select{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#111827;
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+}
+.phone-note{
+    display:block;
+    margin-top:8px;
+    color:#fbbf24;
+    font-size:14px;
+    text-align:left;
+}
+#district{
+    background:#111827;
+    color:white;
+}
+input:focus,
+select:focus{
+
+    outline:none;
+
+    border:2px solid #7ee08a;
+
+    box-shadow:
+    0 0 15px rgba(126,224,138,.7),
+    0 0 30px rgba(126,224,138,.4);
+
+    transform:translateY(-2px);
+
+    transition:.3s;
+}
+.phone-wrapper{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.phone-wrapper input{
+    flex:1;
+}
+
+.valid{
+    color:#4ade80;
+}
+
+.invalid{
+    color:#ef4444;
+}
+.phone-row{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.phone-row input{
+    flex:1;
+}
+
+#phoneMessage{
+    min-width:180px;
+    font-size:14px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.valid{
+    color:#4ade80;
+}
+
+.invalid{
+    color:#ef4444;
+}
+.phone-row{
+    position:relative;
+}
+
+#phoneMessage{
+    position:absolute;
+    left:102%;
+    top:50%;
+    transform:translateY(-50%);
+    width:260px;
+    font-size:14px;
+    font-weight:600;
+}
+/* Selected dropdown white */
+
+select.filled{
+    background:#e5e7eb !important;
+    color:#000 !important;
+    font-weight:600;
+}
+
+select.filled option{
+    color:#000;
+}
+select.filled{
+    background:#ffffff !important;
+    color:#111827 !important;
+    font-weight:600;
+}
+
+.admission-form input{
+    font-weight:600;
+    color:#111827;
+}

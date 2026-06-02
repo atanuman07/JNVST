@@ -10,7 +10,8 @@ CREATE TABLE IF NOT EXISTS students(
     name TEXT,
     phone TEXT,
     student_class TEXT,
-    district TEXT
+    district TEXT,
+    status TEXT DEFAULT 'Pending'
 )
 ''')
 
