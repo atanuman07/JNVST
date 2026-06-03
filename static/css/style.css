@@ -1127,3 +1127,106 @@ select.filled option{
     border-radius:10px;
     font-weight:600;
 }
+/* ================= MOBILE FIX ================= */
+
+@media(max-width:768px){
+
+    .navbar{
+        position:relative;
+        flex-direction:column;
+        padding:20px 15px;
+        gap:15px;
+    }
+
+    .logo img{
+        height:70px;
+    }
+
+    .nav-links{
+        width:100%;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+        text-align:center;
+    }
+
+    .nav-links a{
+        font-size:15px;
+    }
+
+    .nav-buttons{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:12px;
+    }
+
+    .status-btn,
+    .join-btn,
+    .admin-btn{
+        width:90%;
+        max-width:280px;
+        text-align:center;
+    }
+
+    .hero{
+        height:auto;
+        padding:40px 15px;
+    }
+
+    .hero-content{
+        width:100%;
+        margin-top:20px;
+        padding:20px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .stats{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .stat-box{
+        width:100%;
+        min-width:auto;
+    }
+
+    .course-card,
+    .feature-card,
+    .testimonial-card{
+        width:100%;
+    }
+
+    .status-check{
+        width:95%;
+        padding:20px;
+    }
+
+    .status-check input{
+        width:100%;
+    }
+
+    .phone-row{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    #phoneMessage{
+        position:static;
+        width:100%;
+        margin-top:8px;
+        transform:none;
+    }
+
+    .youtube iframe{
+        height:220px;
+    }
+}
