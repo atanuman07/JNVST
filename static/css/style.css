@@ -1085,3 +1085,45 @@ select.filled option{
 .status-result h2{
     color:#4ade80;
 }
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.home-btn{
+    background:#3b82f6;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.logout-btn{
+    background:#ef4444;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:10px;
+    font-weight:600;
+}
+.top-bar{
+    position:absolute;
+    top:30px;
+    left:30px;
+    right:30px;
+
+    display:flex;
+    justify-content:space-between;
+}
+
+.home-btn{
+    background:#3b82f6;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:10px;
+    font-weight:600;
+}

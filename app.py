@@ -229,7 +229,7 @@ def check_status():
         student_name="",
         student_status="No Application Found"
     )
-   
+
 if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
