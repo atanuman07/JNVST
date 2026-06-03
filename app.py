@@ -109,12 +109,24 @@ def admin():
     cursor.execute("SELECT COUNT(*) FROM students")
     total_students = cursor.fetchone()[0]
 
+    cursor.execute("SELECT COUNT(*) FROM students WHERE status='Pending'")
+    pending_students = cursor.fetchone()[0]
+
+    cursor.execute("SELECT COUNT(*) FROM students WHERE status='Approved'")
+    approved_students = cursor.fetchone()[0]
+
+    cursor.execute("SELECT COUNT(*) FROM students WHERE status='Rejected'")
+    rejected_students = cursor.fetchone()[0]
+
     conn.close()
 
     return render_template(
         "admin.html",
         students=students,
-        total_students=total_students
+        total_students=total_students,
+        pending_students=pending_students,
+        approved_students=approved_students,
+        rejected_students=rejected_students
     )
 
 # =========================
