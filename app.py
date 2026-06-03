@@ -28,9 +28,9 @@ def admission():
     phone = request.form["phone"]
 
     if (
-    len(phone) != 10
-    or not phone.isdigit()
-    or phone[0] not in ["6", "7", "8", "9"]
+        len(phone) != 10
+        or not phone.isdigit()
+        or phone[0] not in ["6", "7", "8", "9"]
     ):
         return redirect("/")
 
@@ -39,6 +39,22 @@ def admission():
 
     conn = sqlite3.connect("admissions.db")
     cursor = conn.cursor()
+
+    # Duplicate phone check
+    cursor.execute(
+        "SELECT * FROM students WHERE phone=?",
+        (phone,)
+    )
+
+    existing_student = cursor.fetchone()
+
+    if existing_student:
+        conn.close()
+
+        return render_template(
+            "success.html",
+            message="This phone number is already registered."
+        )
 
     cursor.execute("""
         INSERT INTO students

@@ -222,19 +222,50 @@ body{
 <body>
 
 <div class="success-card">
-
-```
+{% if message %}
+<div class="icon">❌</div>
+{% else %}
 <div class="icon">🎯</div>
+{% endif %}
+
+{% if message %}
+
+<h1 style="color:#ff4d4d;">
+    ALREADY REGISTERED
+</h1>
+
+<h2>
+    This phone number is already registered.
+</h2>
+
+{% else %}
 
 <h1>APPLICATION RECEIVED</h1>
 
-<h2>Congratulations! 🎉<br>Welcome To NCC Family</h2>
+<h2>
+    Congratulations! 🎉<br>
+    Welcome To NCC Family
+</h2>
+
+{% endif %}
+
+{% if message %}
+
+<p>
+    Our records show that this mobile number has already been used
+    for admission enquiry. Please use another number or contact us
+    if you think this is a mistake.
+</p>
+
+{% else %}
 
 <p>
     Your JNVST admission enquiry has been successfully submitted.
     Our admission team will contact you shortly and guide you through
     the complete Jawahar Navodaya Vidyalaya admission process.
 </p>
+
+{% endif %}
 
 <div class="features">
 
@@ -273,12 +304,7 @@ body{
     <a href="/" class="btn home-btn">
         🏠 Back To Home
     </a>
-
 </div>
-```
-
 </div>
-
 </body>
-
 </html>
