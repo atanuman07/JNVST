@@ -73,6 +73,37 @@ body{
 
     transition:0.3s;
 }
+.status-btn{
+    text-decoration:none;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    color:#5ee98c;
+
+    border:2px solid #5ee98c;
+
+    transition:.3s;
+}
+
+.status-btn:hover{
+    background:#5ee98c;
+    color:#08111f;
+
+    transform:translateY(-3px);
+}
+
+.status-btn:hover{
+
+    background:#4ade80;
+
+    color:#111827;
+
+    transform:translateY(-2px);
+}
 
 .join-btn:hover{
     transform:translateY(-3px);
@@ -1031,4 +1062,26 @@ select.filled option{
     background:#ffffff !important;
     color:#000000 !important;
     font-weight:700 !important;
+}
+.status-result{
+
+    margin-top:25px;
+    padding:20px;
+
+    background:#111827;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.status-result h3{
+    color:white;
+    margin-bottom:10px;
+}
+
+.status-result h2{
+    color:#4ade80;
 }

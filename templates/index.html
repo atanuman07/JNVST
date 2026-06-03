@@ -34,14 +34,20 @@
         </ul>
 
         <div class="nav-buttons">
-    <a 
-      href="#admission" class="join-btn">
-        Enroll Now
-     </a>
+
+    <a href="#status" class="status-btn">
+        🔍 Check Status
+    </a>
+
+    <a href="#admission" class="join-btn">
+        🚀 Enroll Now
+    </a>
 
     <a href="/login" class="admin-btn">
-        Admin
+        🔒 Admin
     </a>
+
+</div>
 </div>
 
     </nav>
@@ -327,7 +333,7 @@ target="_blank">
     </form>
 
 </section>
-<section class="status-check">
+<section class="status-check" id="status">
 
     <h2>Check Admission Status</h2>
 
@@ -352,6 +358,21 @@ target="_blank">
         </button>
 
     </form>
+    {% if student_status %}
+
+<div class="status-result">
+
+    <h3 style="color:yellow;font-size:40px;">
+    {{ student_name }}
+</h3>
+
+    <h2 style="color:red;font-size:50px;">
+    {{ student_status }}
+</h2>
+
+</div>
+
+{% endif %}
 
 </section>
  
@@ -590,6 +611,20 @@ function validateForm(){
 
     return true;
 }
+</script>
+<script>
+window.onload = function () {
+
+    const result = document.querySelector(".status-result");
+
+    if(result){
+        result.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
+
+};
 </script>
 </body>
 </html>

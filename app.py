@@ -11,7 +11,11 @@ app.secret_key = "jnvst_secret_key"
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template(
+        "index.html",
+        student_name=None,
+        student_status=None
+    )
 
 
 # =========================
@@ -177,7 +181,7 @@ def check_status():
     cursor = conn.cursor()
 
     cursor.execute(
-        "SELECT status,name FROM students WHERE phone=?",
+        "SELECT status, name FROM students WHERE phone=?",
         (phone,)
     )
 
@@ -186,42 +190,18 @@ def check_status():
     conn.close()
 
     if student:
-
         return render_template(
-            "status.html",
-            name=student[1],
-            status=student[0]
+            "index.html",
+            student_name=student[1],
+            student_status=student[0]
         )
 
-    return """
-    <h1>No Application Found</h1>
-    <a href="/">Go Back</a>
-    """
-
-    conn = sqlite3.connect("admissions.db")
-    cursor = conn.cursor()
-
-    cursor.execute(
-        "SELECT status,name FROM students WHERE phone=?",
-        (phone,)
+    return render_template(
+        "index.html",
+        student_name="",
+        student_status="No Application Found"
     )
-
-    student = cursor.fetchone()
-
-    conn.close()
-
-    if student:
-
-        return render_template(
-            "status.html",
-            name=student[1],
-            status=student[0]
-        )
-
-    return """
-    <h1>No Application Found</h1>
-    <a href='/'>Go Back</a>
-    """
+   
 if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
