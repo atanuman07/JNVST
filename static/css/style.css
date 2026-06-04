@@ -1187,7 +1187,10 @@ select.filled option{
     margin-top:0;
     padding:18px 15px;
         background:rgba(8,17,31,.9);
+        border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.35);
     }
+    
 
     .hero h1{
     font-size:26px;
@@ -1227,7 +1230,7 @@ select.filled option{
     .admission,
     .youtube,
     .contact{
-        padding:60px 5%;
+        padding:40px 5%;
     }
 
     .course-card,
@@ -1241,7 +1244,7 @@ select.filled option{
     .features h2,
     .testimonials h2,
     .admission h2{
-        font-size:34px;
+        font-size:30px;
     }
 
     .youtube iframe{
@@ -1274,4 +1277,8 @@ select.filled option{
         margin-top:8px;
         transform:none;
     }
+}
+.result-gallery img{
+    height:280px;
+    object-fit:cover;
 }
