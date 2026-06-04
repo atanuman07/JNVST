@@ -1300,13 +1300,13 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
 .logo{
-    margin-top:-110px;
+    margin-top:-130px;
     position:relative;
     z-index:10;
 }
 
 .logo img{
-    height:90px !important;
+    height:120px !important;
 }
 
     .mobile-banner img{
