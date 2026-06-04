@@ -1322,8 +1322,17 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
 .banner-logo img{
-    width:65px;
-    height:auto;
+    width:75px;
+    height:75px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid rgba(255,255,255,.8);
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.35);
 }
 }
 @media(max-width:768px){
