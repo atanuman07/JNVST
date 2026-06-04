@@ -121,6 +121,24 @@ body{
 
     font-weight:600;
 }
+.app-id{
+
+    display:inline-block;
+
+    margin-bottom:20px;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    background:#111827;
+
+    color:#4ade80;
+
+    font-weight:700;
+
+    border:1px solid rgba(255,255,255,.08);
+}
 
 .contact-box{
 
@@ -256,6 +274,9 @@ body{
 {% else %}
 
 <h1>APPLICATION RECEIVED</h1>
+<div class="app-id">
+    Application ID: NCC{{ student_id }}
+</div>
 
 <h2>
     Congratulations! 🎉<br>

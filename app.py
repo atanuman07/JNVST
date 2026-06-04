@@ -23,7 +23,6 @@ def home():
 # =========================
 @app.route("/admission", methods=["POST"])
 def admission():
-
     name = request.form["name"]
     phone = request.form["phone"]
 
@@ -40,7 +39,7 @@ def admission():
     conn = sqlite3.connect("admissions.db")
     cursor = conn.cursor()
 
-    # Duplicate phone check
+# Duplicate phone check
     cursor.execute(
         "SELECT * FROM students WHERE phone=?",
         (phone,)
@@ -62,11 +61,15 @@ def admission():
         VALUES (?, ?, ?, ?)
     """, (name, phone, student_class, district))
 
+    student_id = cursor.lastrowid
+
     conn.commit()
     conn.close()
 
-    return render_template("success.html")
-
+    return render_template(
+        "success.html",
+        student_id=student_id
+    )
 
 
 # =========================
