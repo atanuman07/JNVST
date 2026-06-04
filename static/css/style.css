@@ -1404,8 +1404,7 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
 
     .result-gallery img{
     width:100%;
-    aspect-ratio:1/1;
-    object-fit:cover;
+    height:auto;
     display:block;
     border-radius:14px;
 }
@@ -1433,6 +1432,21 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
     .contact h2{
         font-size:26px !important;
         margin-bottom:20px !important;
+    }
+
+}
+@media(max-width:768px){
+
+    .result-gallery{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .result-gallery img{
+        width:100%;
+        height:auto;
+        border-radius:14px;
     }
 
 }
