@@ -1288,31 +1288,17 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
 .mobile-banner{
     display:none;
 }
+.mobile-banner{
+    display:none;
+}
 
 @media(max-width:768px){
 
     .mobile-banner{
         display:block;
         width:100%;
+        position:relative;
     }
-    .mobile-banner{
-    position:relative;
-}
-@media(max-width:768px){
-
-    .logo{
-        position:absolute;
-        top:15px;
-        left:15px;
-        z-index:999;
-    }
-
-    .logo img{
-        height:90px !important;
-        width:auto;
-    }
-}
-
 
     .mobile-banner img{
         width:100%;
@@ -1321,5 +1307,15 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
 
     .hero{
         background:none !important;
+    }
+
+    .logo{
+        position:relative;
+        margin-top:0;
+    }
+
+    .logo img{
+        height:110px !important;
+        width:auto;
     }
 }
