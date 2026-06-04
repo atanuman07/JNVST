@@ -1241,3 +1241,169 @@ select.filled option{
     margin-top:20px;
     padding:25px;
 }
+@media (max-width:768px){
+
+    .navbar{
+        padding:15px;
+        gap:10px;
+    }
+
+    .logo img{
+        height:70px;
+    }
+
+    .hero{
+        order:-1;
+        padding-top:20px;
+    }
+
+    .hero-content{
+        width:95%;
+        padding:25px 20px;
+        margin:0 auto;
+    }
+
+    .hero h1{
+        font-size:42px;
+        line-height:1.2;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .stats{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+    }
+
+    .stat-box:last-child{
+        grid-column:span 2;
+    }
+
+    .nav-links{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+        width:100%;
+    }
+
+    .nav-buttons{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        gap:12px;
+    }
+
+    .status-btn,
+    .join-btn,
+    .admin-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .whatsapp-btn{
+        bottom:110px;
+        width:60px;
+        height:60px;
+    }
+}
+@media (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .navbar{
+        position:relative;
+        padding:15px 10px;
+        gap:10px;
+    }
+
+    .logo img{
+        height:55px;
+    }
+
+    .nav-links{
+        display:grid !important;
+        grid-template-columns:1fr 1fr;
+        width:100%;
+        gap:10px;
+        text-align:center;
+    }
+
+    .nav-links a{
+        font-size:14px;
+    }
+
+    .nav-buttons{
+        display:flex !important;
+        flex-direction:column;
+        width:100%;
+        gap:10px;
+    }
+
+    .status-btn,
+    .join-btn,
+    .admin-btn{
+        width:100%;
+        max-width:none;
+        text-align:center;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:20px 10px 40px;
+    }
+
+    .hero-content{
+        width:100%;
+        margin-top:10px;
+        padding:20px 15px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .stats{
+        display:grid !important;
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .stat-box{
+        min-width:auto;
+        width:100%;
+        padding:20px;
+    }
+
+    .stat-box:last-child{
+        grid-column:span 2;
+    }
+
+    .courses,
+    .features,
+    .results,
+    .testimonials,
+    .admission,
+    .youtube,
+    .contact{
+        padding:60px 5%;
+    }
+
+    .course-card,
+    .feature-card,
+    .testimonial-card{
+        width:100%;
+    }
+
+    .youtube iframe{
+        height:220px;
+    }
+}
