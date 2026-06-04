@@ -1415,9 +1415,14 @@ select.filled option{
         overflow-x:hidden;
     }
 
+    .hero{
+        min-height:auto;
+        padding:20px 10px 40px;
+    }
+
     .hero-content{
-        width:95%;
-        padding:20px;
+        width:100%;
+        padding:25px 15px;
     }
 
     .hero h1{
@@ -1429,38 +1434,40 @@ select.filled option{
         font-size:18px;
     }
 
-    .section-title,
-    .courses h2,
-    .features h2,
-    .results h2,
-    .testimonials h2,
-    .contact h2{
-        font-size:42px !important;
-        line-height:1.2;
-        margin-bottom:20px;
+    .stats{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:12px;
     }
 
-    .feature-card,
+    .stat-box:last-child{
+        grid-column:span 2;
+    }
+
     .course-card,
+    .feature-card,
     .testimonial-card{
+        width:100%;
         padding:25px;
     }
 
-    .result-gallery{
-        grid-template-columns:1fr;
-        gap:20px;
-    }
-
     .result-gallery img{
+        width:100%;
         height:auto;
-        max-height:none;
+        object-fit:contain;
     }
 
     .courses,
     .features,
     .results,
     .testimonials,
-    .contact{
-        padding:70px 5%;
+    .contact,
+    .admission{
+        padding:60px 5%;
+    }
+
+    .whatsapp-btn{
+        width:60px;
+        height:60px;
     }
 }
