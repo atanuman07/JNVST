@@ -154,7 +154,7 @@ body{
 .hero-content{
 
     max-width:900px;
-
+    overflow:hidden;
     padding:50px;
 
     background:rgba(0,0,0,0.35);
@@ -493,7 +493,7 @@ body{
 
 .result-gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:30px;
 }
 
@@ -1407,16 +1407,60 @@ select.filled option{
         height:220px;
     }
 }
-@media(max-width:768px){
+/* ===== FINAL MOBILE DESIGN ===== */
+
+@media (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .hero-content{
+        width:95%;
+        padding:20px;
+    }
 
     .hero h1{
-        font-size:32px !important;
+        font-size:42px !important;
         line-height:1.2;
     }
 
-    .section-title{
-        font-size:42px !important;
-        line-height:1.1;
+    .hero p{
+        font-size:18px;
     }
 
+    .section-title,
+    .courses h2,
+    .features h2,
+    .results h2,
+    .testimonials h2,
+    .contact h2{
+        font-size:42px !important;
+        line-height:1.2;
+        margin-bottom:20px;
+    }
+
+    .feature-card,
+    .course-card,
+    .testimonial-card{
+        padding:25px;
+    }
+
+    .result-gallery{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .result-gallery img{
+        height:auto;
+        max-height:none;
+    }
+
+    .courses,
+    .features,
+    .results,
+    .testimonials,
+    .contact{
+        padding:70px 5%;
+    }
 }
