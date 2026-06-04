@@ -30,9 +30,9 @@ body{
 
     padding:15px 8%;
 
-    background:rgba(0,0,0,0.35);
+    background:rgba(8,17,31,.75);
     backdrop-filter:blur(12px);
-
+    border-bottom:1px solid rgba(255,255,255,.08);
     z-index:1000;
 }
 
@@ -179,7 +179,10 @@ body{
     margin-bottom:15px;
 
     text-shadow:
+    
     0 4px 20px rgba(0,0,0,0.5);
+    color:#ffffff;
+letter-spacing:.5px;
 }
 
 .hero p{
@@ -633,7 +636,12 @@ body{
 }
 
 .cta-btn:hover{
+
     transform:translateY(-5px);
+
+    box-shadow:
+    0 0 35px rgba(94,233,140,.55);
+
 }
 
 /* MOBILE */
@@ -704,6 +712,7 @@ body{
     text-decoration:none;
 
     margin-bottom:10px;
+    transition:.3s;
 }
 
 .footer-box a:hover{
