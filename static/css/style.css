@@ -1471,3 +1471,33 @@ select.filled option{
         height:60px;
     }
 }
+@media(max-width:768px){
+
+    .nav-links{
+        display:grid !important;
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+        width:100%;
+    }
+
+    .nav-links a{
+        font-size:14px;
+    }
+}
+@media(max-width:768px){
+
+    .logo img{
+        height:50px !important;
+    }
+}
+@media(max-width:768px){
+
+    .hero-content{
+        background:rgba(8,17,31,.88) !important;
+        padding:20px !important;
+    }
+
+    .hero h1{
+        font-size:34px !important;
+    }
+}
