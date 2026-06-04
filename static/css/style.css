@@ -600,8 +600,25 @@ letter-spacing:.5px;
 
     box-shadow:
     0 10px 30px rgba(0,0,0,.25);
+    position:relative;
+    overflow:hidden;
 }
+.cta-box::before{
 
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(94,233,140,.08);
+
+    top:-70px;
+    right:-70px;
+}
 .cta-box h2{
     font-size:48px;
     margin-bottom:20px;
@@ -714,12 +731,12 @@ letter-spacing:.5px;
     margin-bottom:10px;
     transition:.3s;
 }
-
 .footer-box a:hover{
 
     color:#5ee98c;
-}
 
+    padding-left:6px;
+}
 .footer-bottom{
 
     text-align:center;
@@ -1325,8 +1342,8 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 .banner-logo{
     position:absolute;
-    top:10px;
-    left:5px;
+    top:2px;
+    left:8px;
     z-index:999;
 }
 
@@ -1536,10 +1553,9 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
 @media(max-width:768px){
 
     .hero-content{
-        border:1px solid rgba(255,255,255,.12);
-        box-shadow:
-        0 15px 35px rgba(0,0,0,.45);
-    }
+    background:rgba(8,17,31,.92);
+    box-shadow:0 20px 40px rgba(0,0,0,.5);
+}
 
 }
 @media(max-width:768px){
