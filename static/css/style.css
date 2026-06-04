@@ -1450,3 +1450,21 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
     }
 
 }
+@media(max-width:768px){
+
+    .course-card:last-child{
+        grid-column:1 / -1;
+        max-width:260px;
+        margin:0 auto;
+    }
+
+}
+@media(max-width:768px){
+
+    .testimonial-card:last-child{
+        grid-column:1 / -1;
+        max-width:260px;
+        margin:0 auto;
+    }
+
+}
