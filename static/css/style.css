@@ -1407,3 +1407,16 @@ select.filled option{
         height:220px;
     }
 }
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:32px !important;
+        line-height:1.2;
+    }
+
+    .section-title{
+        font-size:42px !important;
+        line-height:1.1;
+    }
+
+}
