@@ -1282,3 +1282,8 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
     height:280px;
     object-fit:cover;
 }
+.hero{
+    background-size: contain !important;
+    background-repeat:no-repeat;
+    background-position:top center;
+}
