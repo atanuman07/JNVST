@@ -512,7 +512,9 @@ body{
 }
 
 .result-gallery img:hover{
-    transform:scale(1.05);
+
+    transform:translateY(-5px) scale(1.03);
+
 }
 /* ================= TESTIMONIALS ================= */
 
@@ -616,7 +618,7 @@ body{
     display:inline-block;
 
     text-decoration:none;
-
+    box-shadow:0 0 25px rgba(94,233,140,.35);
     background:#5ee98c;
     color:#fff;
 
@@ -777,12 +779,12 @@ body{
 /* ================= WHATSAPP BUTTON ================= */
 
 .whatsapp-btn{
-
+    
     position:fixed;
 
     bottom:90px;
     right:15px;
-
+    animation: float 2.5s ease-in-out infinite;
     width:70px;
     height:70px;
 
@@ -1465,6 +1467,72 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
         grid-column:1 / -1;
         max-width:260px;
         margin:0 auto;
+    }
+
+}
+@media(max-width:768px){
+
+    .feature-card,
+    .course-card,
+    .testimonial-card{
+
+        background:rgba(17,24,39,.9);
+
+        border:1px solid rgba(255,255,255,.08);
+
+        box-shadow:
+        0 8px 20px rgba(0,0,0,.25);
+
+        border-radius:20px;
+    }
+
+}
+@media(max-width:768px){
+
+    .features h2,
+    .courses h2,
+    .results h2,
+    .testimonials h2{
+
+        text-shadow:
+        0 0 20px rgba(255,255,255,.15);
+
+    }
+
+}
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+@media(max-width:768px){
+
+    .hero-content{
+        border:1px solid rgba(255,255,255,.12);
+        box-shadow:
+        0 15px 35px rgba(0,0,0,.45);
+    }
+
+}
+@media(max-width:768px){
+
+    .footer-container{
+        gap:20px;
+        text-align:center;
+    }
+
+    .footer-box{
+        width:100%;
     }
 
 }
