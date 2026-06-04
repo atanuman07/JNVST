@@ -1314,13 +1314,13 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 .banner-logo{
     position:absolute;
-    top:105px;
-    left:20px;
+    top:65px;
+    left:12px;
     z-index:999;
 }
 
 .banner-logo img{
-    width:95px;
+    width:65px;
     height:auto;
 }
 }
