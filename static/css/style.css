@@ -1310,12 +1310,17 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
     }
 
     .logo{
-        position:relative;
-        margin-top:0;
-    }
+    display:none;
+}
+.banner-logo{
+    position:absolute;
+    top:105px;
+    left:20px;
+    z-index:999;
+}
 
-    .logo img{
-        height:110px !important;
-        width:auto;
-    }
+.banner-logo img{
+    width:95px;
+    height:auto;
+}
 }
