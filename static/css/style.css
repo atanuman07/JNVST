@@ -1324,3 +1324,89 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
     height:auto;
 }
 }
+@media(max-width:768px){
+
+    .feature-container{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .feature-card{
+        width:100%;
+        padding:18px 12px;
+    }
+
+    .feature-card h3{
+        font-size:16px;
+    }
+
+    .feature-card p{
+        font-size:13px;
+        line-height:1.4;
+    }
+
+}
+/* ===== MOBILE PREMIUM LAYOUT ===== */
+
+@media(max-width:768px){
+
+    /* COURSES 2 COLUMN */
+
+    .course-container{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .course-card{
+        width:100%;
+        padding:18px 12px;
+    }
+
+    .course-card h3{
+        font-size:18px;
+    }
+
+    .course-card p{
+        font-size:13px;
+        line-height:1.4;
+    }
+
+    /* PARENTS SAY 2 COLUMN */
+
+    .testimonial-container{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .testimonial-card{
+        width:100%;
+        padding:18px 12px;
+    }
+
+    .testimonial-card p{
+        font-size:13px;
+    }
+
+    .testimonial-card h4{
+        font-size:14px;
+    }
+
+    /* RESULTS 2 IMAGE PER ROW */
+
+    .result-gallery{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .result-gallery img{
+        width:100%;
+        height:auto;
+        display:block;
+        border-radius:12px;
+    }
+
+}
