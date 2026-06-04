@@ -1403,10 +1403,36 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
     }
 
     .result-gallery img{
-        width:100%;
-        height:auto;
-        display:block;
-        border-radius:12px;
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    display:block;
+    border-radius:14px;
+}
+
+}
+@media(max-width:768px){
+
+    .feature-card,
+    .course-card,
+    .testimonial-card{
+        min-height:180px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+
+}
+@media(max-width:768px){
+
+    .features h2,
+    .courses h2,
+    .results h2,
+    .testimonials h2,
+    .admission h2,
+    .contact h2{
+        font-size:26px !important;
+        margin-bottom:20px !important;
     }
 
 }
